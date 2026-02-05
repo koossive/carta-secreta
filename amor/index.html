@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>love message <3</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+
+<style>
+body {
+  background: #FFF6E9;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.login-box {
+  background: #FFD6E7;
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.login-box h2 {
+  font-family: 'Pacifico', cursive;
+  color: #ff6f91;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: #FF4F8B;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#error {
+  color: #ff4f4f;
+  margin-top: 10px;
+}
+
+#letter {
+  max-width: 650px;
+  margin: auto;
+  animation: fadeIn 1.5s ease;
+}
+
+#letter h1 {
+  font-family: 'Pacifico', cursive;
+  color: #ff6f91;
+  font-size: 42px;
+}
+
+#letter p {
+  line-height: 1.8;
+  font-size: 18px;
+  color: #5c4b51;
+  margin: 18px 0;
+}
+
+.memory {
+  width: 100%;
+  border-radius: 18px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+  <h2>love message <3</h2>
+  <p>pista: una fecha importante !!</p>
+
+  <input type="text" id="password" placeholder="DD/MM/YY">
+  <button onclick="checkPassword()">Entrar</button>
+
+  <p id="error"></p>
+</div>
+
+<div id="letter" class="hidden">
+  <h1>mi química mayor ♡</h1>
+
+  <img src="foto1.jpg" class="memory">
+
+  <p>
+    desde el primer momento, hasta ahora, supe que tu ibas a ser la única mujer en mi vida, mente y corazón.
+  </p>
+
+  <p>
+    tenías algo, algo que te hace tan especial y hermosa entre el resto; tu carita, tan preciosa, tus ojitos, esos que podría admirar toda mi vida, tu naricita, tus rulitos que te hacen aún más hermosa de lo que eres.
+  </p>
+
+  <img src="foto2.jpg" class="memory">
+
+  <p>
+    y así como me gusta todo de ti físicamente, también me enamora y me derrite tu personalidad, tu humor, la forma que tienes de ver las cosas, tus gustos, tus palabras llenas de amor y empatía, tus apodos tan únicos y hermosos.
+  </p>
+
+  <p>
+    realmente te amo con todo mi corazón y alma, con todo de mi, te daría todo lo que tengo, todo lo que quieras y necesites, porque tú te mereces el mundo entero, te mereces amor y nada más que cosas lindas.
+  </p>
+
+  <img src="foto3.jpg" class="memory">
+
+  <p>
+    te amo infinitamente.
+  </p>
+
+  <p>⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆</p>
+</div>
+
+<script>
+function checkPassword() {
+  const input = document.getElementById("password").value;
+  const correctPassword = "120126"; 
+
+  if (input === correctPassword) {
+    document.querySelector(".login-box").classList.add("hidden");
+    document.getElementById("letter").classList.remove("hidden");
+  } else {
+    document.getElementById("error").textContent = "fecha incorrecta !";
+  }
+}
+</script>
+
+</body>
+</html>
